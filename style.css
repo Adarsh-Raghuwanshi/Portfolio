@@ -22,6 +22,64 @@ a{
     color: black;
 }
 
+nav::before{
+    content: "";
+    background-image: url("images/heart.svg");
+    z-index: 55558;
+    position: absolute;
+    top: 27%;
+    left: 45.5%;
+    width: 4%;
+    height: 8%;
+    transform: scale(0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: pulse 1.2s infinite;
+}
+
+header::before{
+    content: "";
+    background-image: url("images/code.svg");
+    z-index: 55555;
+    position: absolute;
+    top: 38%;
+    left: 55%;
+    width: 4%;
+    height: 8%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: jumpCode 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{transform: scale(0.8);}
+    100%{transform: scale(0.7);}
+}
+
+@keyframes jumpCode{
+    0% {
+        transform: translateY(0) scale3d(.96,.96,1) rotate(4deg);
+    }
+    20% {
+        transform: translateY(8px) scale3d(1.1,1.1,1) rotate(4deg);
+    }
+    30% {
+        transform: translateY(5px) scale3d(.98,.98,1) rotate(4deg);
+    }
+    40% {
+        transform: translateY(6.2px) scale3d(1.05,1.05,1) rotate(4deg);
+    }
+    60% {
+        transform: translateY(6px) scale3d(1.01,1.01,1) rotate(4deg);
+    }
+    80% {
+        transform: translateY(6px) scaleX(1) rotate(4deg);
+    }
+    100% {
+        transform: translateY(0) scale3d(.96,.96,1) rotate(4deg);
+    }
+}
+
 nav{
     background-color: var(--primary-color);
     display: flex;
@@ -65,12 +123,18 @@ li a:hover{
 
 header{
     text-align: center;
-    margin: 5% 0% 4% 0%;
+    margin: 5% 0% 0.7% 0%;
 }
 
-header img{
+img:first-child{
     width: 28%;
     margin-bottom: 3%;
+}
+
+.underline{
+    margin-right: 30%;
+    width: 20%;
+    transform: scale(0.8);
 }
 
 .heading{
@@ -89,7 +153,7 @@ section{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding: 2rem;
+    padding: 1.2rem;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -157,7 +221,7 @@ footer{
     align-items: center;
     padding: 1.5%;
     border-top-right-radius: 35px;
-    width: 80.5%;
+    width: 80%;
 }
 
 footer li{
