@@ -123,18 +123,12 @@ li a:hover{
 
 header{
     text-align: center;
-    margin: 5% 0% 0.7% 0%;
+    margin: 5% 0% 4% 0%;
 }
 
 img:first-child{
     width: 28%;
-    margin-bottom: 3%;
-}
-
-.underline{
-    margin-right: 30%;
-    width: 20%;
-    transform: scale(0.8);
+    margin-bottom: 4%;
 }
 
 .heading{
